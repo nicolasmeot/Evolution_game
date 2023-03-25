@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Evolution game</title>
+  </head>
+  <body>
+    <h1> Evolution Game </h1>
+    <h2> Try to reach the summit of the pyramid !!</h2>
+    <div class = "game-area">
+      <div class="game-intro">
+        <button id="start-button">StartGame</button>
+        <p>Use the arrows to move your character</p>
+        <img src="./images/arrows.png" alt="" class="arrows-img" />
+        <h3>Current Level</h3>
+        <P><em>Egg</em></P>
+        <P><em>Chick</em></P>
+        <P><em>Chicken</em></P>
+        <P><em>Dino</em></P>
+        <P><em>Super-Dino</em></P>
+        <P><em>Super-Dino with XXX followers</em></P>
+        <button id="stop-button">StopGame</button>
+      </div>
+
+      <div id="game-board">
+        <canvas id="canvas" width="1000" height="700"></canvas>
+        
+        <div id="encounter" class="hidden"> 
+          <h3 class = "notTie">It's time for Battle, choose your weapon</h3>
+          <div class="choice">
+            <button id="Rock"><img src="./images/Rock_detoure.png" alt="Rock"/></button>
+            <button id="Paper"><img src="./images/Paper_detoure.png" alt="Paper"/></button>
+            <button id="Scissors"><img src="./images/Scissors_detoure.png" alt="Scissors"/></button>
+          </div>
+        </div>
+        <div id="result" class="hidden">
+          <h3>Result</h3>
+        </div>
+
+      </div>
+
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/characters.js"></script>
+    <script type="text/javascript" src="js/board.js"></script>
+    <script type="text/javascript" src="js/mainCharacter.js"></script>
+  </body>
+</html>

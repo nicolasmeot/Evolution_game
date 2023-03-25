@@ -1,0 +1,161 @@
+/*Couleurs : 
+  Vert : #36C12F
+
+*/
+
+
+body {
+  padding: 0;
+  font-family : Calibri;
+}
+
+h1{
+  text-align : center;
+  font-size : 3rem;
+  color : #36C12F;
+  margin-bottom: 0;
+}
+h2{
+  text-align : center;
+  font-size : 1.5rem;
+  color : #36C12F;
+  font-style: italic;
+  margin-top : 0.5rem
+}
+.game-area {
+  display : flex; 
+  flex-direction : row;
+  justify-content : center;
+  align-items : center;
+}
+.game-intro {
+  display : flex ;
+  flex-direction : column;
+  align-items: center;
+  width : 400px;
+  height : 640px;
+  padding: 30px 10px;
+  margin-right : 20px; 
+  border : solid black 2px;
+}
+
+.game-intro p {
+  font-size: 18px;
+}
+
+.game-intro h3 {
+  margin-top:40px;
+  margin-bottom : 0px;
+}
+.logo-img {
+  width: 350px;
+}
+
+.arrows-img {
+  width: 150px;
+}
+
+#start-button {
+  font-size: 30px;
+  background-color: #36C12F;
+  color: #fff;
+  padding: 20px 40px;
+  border: 0;
+  box-shadow: 0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#game-board {
+  width : 1000px;
+  padding: 0px 0px;
+  margin-left : 20px;
+  border : solid red 2px;
+  position:relative;
+}
+canvas{ 
+  background-color: antiquewhite;
+  background-size : cover;
+  border : solid black 2px;
+  display : flex;
+}
+
+#stop-button {
+  font-size: 30px;
+  background-color: #c12f4c;
+  color: #fff;
+  padding: 20px 40px;
+  border: 0;
+  box-shadow: 0;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+#encounter{
+  background: white;
+  border-radius: 20px;
+  width: 500px; 
+  height: 300px;
+  position : absolute;
+  top:200px;
+  left:250px;
+  /*margin : auto;*/
+}
+
+#encounter h3{
+  text-align: center;
+  font-size: 2rem;;
+  padding-top:20px;
+}
+
+#encounter .tie{
+  padding-top : 40px;
+  padding-bottom : 20px;
+}
+
+.choice{
+  display: flex; 
+  flex-direction : row; 
+  justify-content: space-around; 
+}
+
+#encounter button{
+  border: 0;
+  box-shadow: 0;
+}
+
+#encounter img{
+  width : 80px;
+}
+#encounter.hidden {
+  display: none;
+}
+
+
+#result.hidden {
+  display: none;
+}
+
+#result{
+  background: red;
+  border-radius: 20px;
+  width: 500px; 
+  height: 300px;
+  position : absolute;
+  top:200px;
+  left:250px;
+  /*margin : auto;*/
+
+}
+
+#result h3{
+  text-align: center;
+  font-size: 2rem;;
+  padding-top:20px;
+}
+
+.choice{
+  display: flex; 
+  flex-direction : row; 
+  justify-content: space-around; 
+}
