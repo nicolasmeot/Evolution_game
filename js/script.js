@@ -7,10 +7,21 @@ let characterWidth = 40;
 let intervalOn;
 let frame
 
+//variables du glitch 
+let compte
+let intervalGlitch
+
 // Initialization of Characters
 let mainChar
 let characters = []
 let nbOfCharacters = 20 ;
+let stadeArr = [
+  {stadeName : "Egg", stadeImg :'./images/Egg_detoure.png'},
+  {stadeName : "Chick", stadeImg :'./images/Chick.png'},
+  {stadeName : "Chicken", stadeImg :'./images/Chicken.png'},
+  {stadeName : "Dino", stadeImg :'./images/Dino_detoure.png'},
+  {stadeName : "SuperDino", stadeImg :'./images/SuperDino_detoure.png'},
+]
 
 // Fight initialization
 let fightWindow = document.getElementById("encounter");
@@ -37,7 +48,7 @@ function startGame() {
 function updateGameArea(){
   clear();
   //Moving bots
-  if(frame % 80 === 0){
+  if(frame % 100 === 0){
     for(let el of characters){
       let tempCharacters= characters.slice();
       tempCharacters.splice(tempCharacters.indexOf(el),1);
@@ -63,6 +74,8 @@ function updateGameArea(){
     el.draw();
   }
   mainChar.draw();
+  mainChar.contour();
+  currentStade();
   frame+=1;
 }
 

@@ -13,15 +13,16 @@
     <div class = "game-area">
       <div class="game-intro">
         <button id="start-button">StartGame</button>
-        <p>Use the arrows to move your character</p>
+        <h3>Use the arrows to move your character</h3>
         <img src="./images/arrows.png" alt="" class="arrows-img" />
         <h3>Current Level</h3>
-        <P><em>Egg</em></P>
-        <P><em>Chick</em></P>
-        <P><em>Chicken</em></P>
-        <P><em>Dino</em></P>
-        <P><em>Super-Dino</em></P>
-        <P><em>Super-Dino with XXX followers</em></P>
+        <div id= "avancement">
+          <div id="Egg" class="hidden">Egg</div>
+          <div id="Chick" class="hidden">Chick</div>
+          <div id="Chicken" class="hidden">Chicken</div>
+          <div id="Dino" class="hidden">Dino</div>
+          <div id="SuperDino" class="hidden">Super-Dino with <em>0</em> followers</div>
+        </div>
         <button id="stop-button">StopGame</button>
       </div>
 
@@ -31,13 +32,16 @@
         <div id="encounter" class="hidden"> 
           <h3 class = "notTie">It's time for Battle, choose your weapon</h3>
           <div class="choice">
-            <button id="Rock"><img src="./images/Rock_detoure.png" alt="Rock"/></button>
-            <button id="Paper"><img src="./images/Paper_detoure.png" alt="Paper"/></button>
-            <button id="Scissors"><img src="./images/Scissors_detoure.png" alt="Scissors"/></button>
+            <img src="./images/Rock_detoure.png" alt="Rock" id="Rock"/>
+            <img src="./images/Paper_detoure.png" alt="Paper" id="Paper"/>
+            <img src="./images/Scissors_detoure.png" alt="Scissors" id="Scissors"/>
           </div>
         </div>
         <div id="result" class="hidden">
           <h3>Result</h3>
+          <img src="#" alt="result" id="previous" class = "hidden">
+          <img src="#" alt="result" id="next" class = "hidden">
+          <img src="https://media.tenor.com/Xm9MHAyGVR0AAAAC/better-luck-next-time-try-again.gif" alt="fail" id="fail" class = "hidden">
         </div>
 
       </div>
