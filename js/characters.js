@@ -65,7 +65,6 @@ class Character {
         //this.color = "brown";
         this.stadeName = stadeArr[4].stadeName;
         this.img.src = stadeArr[4].stadeImg;
-        this.followers +=1;
         break;
     } 
   }
@@ -111,19 +110,23 @@ function battle(character1,character2){
 }
 
 function finalStage(){
+  // Je reset les 4 premiers character chacun à un niveau
   for(let i=0; i<stadeArr.length-1; i++){
     characters[i].stade=i-1
     characters[i].advance()
   }
-  let tempFollow = stadeArr.length-1 - 4
-  for(let j=stadeArr.length; j<=stadeArr.length+4; j++){
+  // Pour les autres, j'en met 4 au niveau superDino
+  let tempFollow = characters.length-5 - stadeArr.length
+  for(let j=stadeArr.length-1; j<=stadeArr.length+3; j++){
     characters[j].stade=3
     characters[j].advance()
-    if(j != stadeArr.length+4){
+    //Je leur met un nb de followers aléatoire 
+    if(j !== stadeArr.length+3){
       characters[j].followers = Math.floor(Math.random()*tempFollow)
       tempFollow -= characters[j].followers;
     }
     else{characters[j].followers = tempFollow}
   }
-  characters.splice(stadeArr.length+5,characters.length-stadeArr.length+5)
+  // Je vire les characters qui sont des followers
+  characters.splice(stadeArr.length+4,characters.length-stadeArr.length-4)
 }

@@ -14,7 +14,7 @@ let intervalGlitch
 // Initialization of Characters
 let mainChar
 let characters = []
-let nbOfCharacters = 20 ;
+let nbOfCharacters = 50 ;
 let stadeArr = [
   {stadeName : "Egg", stadeImg :'./images/Egg_detoure.png'},
   {stadeName : "Chick", stadeImg :'./images/Chick.png'},
@@ -36,6 +36,7 @@ let opponent
 function startGame() {
   // Clean canvas and Characters array if re-start
   clear();
+  document.getElementById("result").setAttribute('class','hidden')
   characters.splice(0,characters.length)
   //Initializing the new game
   mainChar = new mainCharacter(350,500,"red","Nico")
@@ -67,7 +68,7 @@ function updateGameArea(){
       fightWindow.setAttribute('class', 'visible');
       //mainBattle(el,mainChar);
       opponent = el;
-      console.log(opponent.name);  
+      console.log(characters.indexOf(opponent));  
     }
   }
   for(let el of characters){

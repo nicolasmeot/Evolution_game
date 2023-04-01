@@ -170,7 +170,7 @@ canvas{
 }
 
 #result img{
-  width : 150px;
+  width : 100px;
   margin : auto; 
 }
 
@@ -180,6 +180,6 @@ canvas{
 #next.hidden{
   display: none;
 }
-#fail.hidden{
+#resultImg.hidden{
   display:none;
 }
